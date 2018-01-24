@@ -14,8 +14,7 @@ class ShadowView: UIView {
         self.layer.shadowOpacity = 0.75
         self.layer.shadowRadius = 5
         self.layer.shadowColor = UIColor.black.cgColor
-        
-        self.awakeFromNib()
+        super.awakeFromNib()
     }
 
 }
