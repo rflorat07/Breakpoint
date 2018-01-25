@@ -10,8 +10,8 @@
 		4F1378BC2018E6AD001938CE /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1378BB2018E6AD001938CE /* ShadowView.swift */; };
 		4F1378BE2018EB2E001938CE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1378BD2018EB2E001938CE /* AuthService.swift */; };
 		4F67E0962018BF6600BCDFD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67E0952018BF6600BCDFD1 /* AppDelegate.swift */; };
-		4F67E0982018BF6700BCDFD1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67E0972018BF6700BCDFD1 /* FirstViewController.swift */; };
-		4F67E09A2018BF6700BCDFD1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67E0992018BF6700BCDFD1 /* SecondViewController.swift */; };
+		4F67E0982018BF6700BCDFD1 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67E0972018BF6700BCDFD1 /* FeedVC.swift */; };
+		4F67E09A2018BF6700BCDFD1 /* GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67E0992018BF6700BCDFD1 /* GroupsVC.swift */; };
 		4F67E09D2018BF6700BCDFD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F67E09B2018BF6700BCDFD1 /* Main.storyboard */; };
 		4F67E09F2018BF6700BCDFD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F67E09E2018BF6700BCDFD1 /* Assets.xcassets */; };
 		4F67E0A22018BF6700BCDFD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F67E0A02018BF6700BCDFD1 /* LaunchScreen.storyboard */; };
@@ -30,8 +30,8 @@
 		4F1378BD2018EB2E001938CE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		4F67E0922018BF6500BCDFD1 /* Breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F67E0952018BF6600BCDFD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F67E0972018BF6700BCDFD1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		4F67E0992018BF6700BCDFD1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		4F67E0972018BF6700BCDFD1 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		4F67E0992018BF6700BCDFD1 /* GroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsVC.swift; sourceTree = "<group>"; };
 		4F67E09C2018BF6700BCDFD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F67E09E2018BF6700BCDFD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F67E0A12018BF6700BCDFD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,8 +103,8 @@
 		4F67E0A92018C05700BCDFD1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4F67E0972018BF6700BCDFD1 /* FirstViewController.swift */,
-				4F67E0992018BF6700BCDFD1 /* SecondViewController.swift */,
+				4F67E0972018BF6700BCDFD1 /* FeedVC.swift */,
+				4F67E0992018BF6700BCDFD1 /* GroupsVC.swift */,
 				4F7F7A3D2018DD5800C892DE /* AuthVC.swift */,
 				4F7F7A3F2018DD9200C892DE /* LoginVC.swift */,
 			);
@@ -289,12 +289,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F7F7A3E2018DD5800C892DE /* AuthVC.swift in Sources */,
-				4F67E09A2018BF6700BCDFD1 /* SecondViewController.swift in Sources */,
+				4F67E09A2018BF6700BCDFD1 /* GroupsVC.swift in Sources */,
 				4F7F7A402018DD9200C892DE /* LoginVC.swift in Sources */,
 				4F1378BE2018EB2E001938CE /* AuthService.swift in Sources */,
 				4F67E0962018BF6600BCDFD1 /* AppDelegate.swift in Sources */,
 				4F1378BC2018E6AD001938CE /* ShadowView.swift in Sources */,
-				4F67E0982018BF6700BCDFD1 /* FirstViewController.swift in Sources */,
+				4F67E0982018BF6700BCDFD1 /* FeedVC.swift in Sources */,
 				4F7F7A422018DE0200C892DE /* InsetTextField.swift in Sources */,
 				4F7F7A3C2018CD9800C892DE /* DataService.swift in Sources */,
 			);
