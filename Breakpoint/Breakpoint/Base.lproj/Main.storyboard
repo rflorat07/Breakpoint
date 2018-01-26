@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,13 +61,56 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="548"/>
                                 <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="SIt-JF-Byq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="100" id="SIt-JF-Byq" customClass="FeedCell" customModule="Breakpoint" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SIt-JF-Byq" id="3l4-mh-9nc">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="LU0-AK-oqN">
+                                                    <rect key="frame" x="16" y="21" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="40V-ym-uNq"/>
+                                                        <constraint firstAttribute="height" constant="50" id="Teg-ej-zm5"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZWX-K8-v6C">
+                                                    <rect key="frame" x="76" y="21" width="274" height="58"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@breakpoint.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxO-Rr-nVr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="274" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="OBY-4S-ReU"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                                            <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="zOy-RJ-xE9">
+                                                            <rect key="frame" x="0.0" y="26" width="274" height="32"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="12"/>
+                                                            <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZWX-K8-v6C" firstAttribute="top" secondItem="3l4-mh-9nc" secondAttribute="topMargin" constant="10" id="0OJ-aA-cbR"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZWX-K8-v6C" secondAttribute="bottom" constant="10" id="2Cw-Fe-VDb"/>
+                                                <constraint firstItem="LU0-AK-oqN" firstAttribute="top" secondItem="3l4-mh-9nc" secondAttribute="topMargin" constant="10" id="5pZ-2Q-aNi"/>
+                                                <constraint firstItem="ZWX-K8-v6C" firstAttribute="leading" secondItem="LU0-AK-oqN" secondAttribute="trailing" constant="10" id="Tdo-Zr-Bpi"/>
+                                                <constraint firstItem="LU0-AK-oqN" firstAttribute="leading" secondItem="3l4-mh-9nc" secondAttribute="leadingMargin" constant="1" id="jkt-xz-nRm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZWX-K8-v6C" secondAttribute="trailing" constant="10" id="kSZ-t3-XTi"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.16845279932022095" green="0.16772514581680298" blue="0.21330773830413818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="contentLbl" destination="zOy-RJ-xE9" id="1ly-bz-Unk"/>
+                                            <outlet property="emailLbl" destination="uxO-Rr-nVr" id="tAB-MP-lIK"/>
+                                            <outlet property="profileImage" destination="LU0-AK-oqN" id="PAv-rk-PdH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
